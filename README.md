@@ -108,7 +108,7 @@ TP1DPBO2526C2/
 
 ## 📸 Dokumentasi Program Berjalan
 
-Berikut adalah bukti dokumentasi tangkapan layar/screenrecord dari masing-masing bahasa pemrograman saat program berhasil dijalankan:
+Berikut adalah bukti dokumentasi tangkapan layar dari masing-masing bahasa pemrograman saat program berhasil dijalankan:
 
 ### A. C++ (CLI Output)
 ![Output Pembuka C++](Dokumentasi/cpp_output/Output_pembuka.png)
