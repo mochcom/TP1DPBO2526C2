@@ -47,8 +47,6 @@ Sistem menggunakan 1 class tunggal yaitu **`Studio`** yang merepresentasikan stu
 
 ---
 
-## 🔄 Flow & Alur Kode Program
-
 ## 🔄 Alur & Flow Kode Program
 
 ### **1. Implementasi CLI (C++, Java, Python)**
