@@ -24,6 +24,32 @@ Program dapat mengelola *array/list of objects* untuk entitas **`Studio`** melal
 5. **Cari Data Studio (Search):** Mencari studio bioskop tertentu berdasarkan kriteria unik (`idStudio` / `namaStudio`).
 
 ---
+## 🧩 Konsep OOP yang Digunakan
+
+Program ini mengimplementasikan konsep-konsep dasar *Object-Oriented Programming* (OOP) sebagai berikut:
+
+### **1. Class & Object**
+- **Class (`Studio`):** Bertindak sebagai cetak biru (*blueprint*) yang mendefinisikan struktur data (atribut) dan perilaku/fungsi (method) untuk mengelola data studio bioskop.
+- **Object:** Merupakan instansiasi nyata dari class `Studio`. Setiap entitas studio bioskop yang dibuat di dalam program (seperti `Studio 1 - Regular`, `IMAX Hall`) diproses sebagai objek mandiri yang memiliki nilai atributnya masing-masing.
+
+### **2. Encapsulation (Enkapsulasi)**
+- Atribut-atribut pada class `Studio` dibungkus dan dilindungi (diberi visibilitas `private`) agar tidak dapat diakses atau diubah secara langsung dari luar class secara bebas.
+- Akses dan modifikasi terhadap atribut dilakukan secara terkontrol melalui fungsi/method khusus:
+  - **Getter:** Untuk mengambil/membaca nilai atribut (contoh: `getIdStudio()`, `getNamaStudio()`).
+  - **Setter:** Untuk mengubah/mengisi nilai atribut (contoh: `setIdStudio()`, `setNamaStudio()`).
+
+### **3. Constructor**
+- Method khusus yang dipanggil secara otomatis saat suatu objek `Studio` diinstansiasi.
+- Digunakan untuk menginisialisasi nilai awal dari atribut-atribut objek `Studio` (baik berupa *default constructor* maupun *parameterized constructor*).
+
+### **4. Array / List of Objects**
+- Penerapan konsep penampung data (*data structure*) untuk mengelola banyak objek `Studio` secara dinamis dalam satu variabel penampung:
+  - **C++:** Menggunakan `std::vector<Studio>`
+  - **Java:** Menggunakan `ArrayList<Studio>`
+  - **Python:** Menggunakan `list` of `Studio` objects
+  - **PHP:** Menggunakan `array` of `Studio` objects / `$_SESSION`
+
+---
 
 ## 📐 Desain Class & Atribut
 
