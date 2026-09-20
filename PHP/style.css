@@ -1,0 +1,71 @@
+/* Saya Moch Fadillah Pratama dengan NIM 2506968 mengerjakan Tugas Praktikum 1 dalam mata kuliah Desain dan Pemrograman Berbasis Objek untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin. */
+
+.studio-card {
+    background-color: #1e293b; /* Warna latar belakang card */
+    border: 1px solid #334155; /* Garis tepi card */
+    transition: transform 0.2s ease, border-color 0.2s ease; /* Transisi efek hover */
+}
+
+.studio-card:hover {
+    border-color: #4f46e5; /* Garis tepi ungu saat disorot */
+    transform: translateY(-2px); /* Efek melayang ke atas */
+}
+
+::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar browser */
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a; /* Warna latar belakang jalur scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155; /* Warna penunjuk scrollbar */
+    border-radius: 4px; /* Kelengkungan penunjuk scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569; /* Warna penunjuk scrollbar saat disorot */
+}
+
+.input-field {
+    width: 100%; /* Lebar penuh */
+    background-color: #0f172a; /* Warna latar input */
+    border: 1px solid #334155; /* Warna border input */
+    border-radius: 0.5rem; /* Rounding sudut input */
+    padding: 0.5rem 0.75rem; /* Padding dalam input */
+    font-size: 0.875rem; /* Ukuran teks input */
+    color: #ffffff; /* Warna teks input */
+    transition: border-color 0.2s ease; /* Transisi fokus border */
+}
+
+.input-field:focus {
+    outline: none; /* Hilangkan outline default browser */
+    border-color: #6366f1; /* Warna border saat fokus */
+}
+
+.file-input {
+    width: 100%; /* Lebar penuh */
+    background-color: #0f172a; /* Warna latar input file */
+    border: 1px solid #334155; /* Border input file */
+    border-radius: 0.5rem; /* Rounding sudut */
+    padding: 0.375rem 0.75rem; /* Padding dalam */
+    font-size: 0.75rem; /* Ukuran teks */
+    color: #94a3b8; /* Warna teks keterangan file */
+}
+
+.file-input::file-selector-button {
+    margin-right: 1rem; /* Jarak tombol dari teks */
+    padding: 0.25rem 0.75rem; /* Padding tombol */
+    border-radius: 0.375rem; /* Rounding sudut tombol */
+    border: 0; /* Hilangkan border tombol default */
+    font-size: 0.75rem; /* Ukuran teks tombol */
+    font-weight: 600; /* Ketebalan teks tombol */
+    background-color: #4f46e5; /* Warna tombol upload */
+    color: #ffffff; /* Warna teks tombol */
+    cursor: pointer; /* Mengubah kursor jadi pointer */
+}
+
+.file-input::file-selector-button:hover {
+    background-color: #4338ca; /* Warna tombol upload saat disorot */
+}
