@@ -1,69 +1,72 @@
 # TP1DPBO2526C2
 # Tugas Praktikum 1 - Desain dan Pemrograman Berbasis Objek (DPBO)
 
-## 📌 Janji
-> Saya Moch Fadillah Pratama dengan NIM 2506968 mengerjakan Tugas Praktikum 1 dalam mata kuliah Desain dan Pemrograman Berbasis Objek untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
+[![Language C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
+[![Language Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com/)
+[![Language Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Language PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
 
 ---
 
-## 👤 Informasi Mahasiswa
-| Detail | Informasi |
-| :--- | :--- |
-| **Nama** | `Moch Fadillah Pratama` |
-| **NIM** | `2506968` |
-| **Kelas** | `C2` |
-| **Repository** | `TP1DPBO2526C2` |
+## 📌 Janji
+> Saya Moch Fadillah Pratama dengan NIM 2506968 mengerjakan Tugas Praktikum 1 dalam mata kuliah Desain dan Pemrograman Berbasis Objek untuk keberkahan-Nya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 ---
 
 ## 🎬 Deskripsi Program
 Program ini merupakan aplikasi pengelolaan data bioskop berbasis Object-Oriented Programming (OOP) sederhana yang diimplementasikan dalam 4 bahasa pemrograman yaitu **C++**, **Java**, **Python**, dan **PHP**. 
 
-Aplikasi ini mengelola kumpulan objek (film/bioskop) dalam bentuk *array/list of objects* dengan fitur CRUD (Create, Read, Update, Delete) serta pencarian data.
-
-### 🛠️ Fitur Utama
-- ➕ **Tambah Data**: Menambahkan objek data bioskop baru ke dalam daftar.
-- 📋 **Tampilkan Data**: Menampilkan seluruh data bioskop yang tersimpan.
-- ✏️ **Update Data**: Mengubah data bioskop berdasarkan identifier unik (`ID`).
-- 🗑️ **Hapus Data**: Menghapus data bioskop berdasarkan identifier unik (`ID`).
-- 🔍 **Cari Data**: Mencari data bioskop spesifik berdasarkan identifier unik (`ID`).
+Program dapat mengelola *array/list of objects* untuk entitas **`Studio`** melalui fitur utama CRUD (Create, Read, Update, Delete) serta pencarian data (*Search*):
+1. **Tambah Data Studio (Create):** Menambahkan data studio bioskop baru ke dalam daftar.
+2. **Tampilkan Data Studio (Read):** Menampilkan seluruh daftar studio bioskop yang tersimpan.
+3. **Update Data Studio (Update):** Mengubah data studio bioskop berdasarkan `idStudio`.
+4. **Hapus Data Studio (Delete):** Menghapus data studio bioskop dari daftar berdasarkan `idStudio`.
+5. **Cari Data Studio (Search):** Mencari studio bioskop tertentu berdasarkan kriteria unik (`idStudio` / `namaStudio`).
 
 ---
 
-## 🏛️ Desain Class & Atribut
+## 📐 Desain Class & Atribut
 
-Program ini menggunakan **1 class tunggal** bernama `Studio` untuk mepresentasikan data dengan tema bioskop.
+Sistem menggunakan 1 class tunggal yaitu **`Studio`** yang merepresentasikan studio bioskop.
 
-### Atribut Class
-| Nama Atribut | Tipe Data | Keterangan |
-| :--- | :--- | :--- |
-| `id` | `String` / `int` | Identifier unik untuk setiap data |
-| `judul` | `String` | Judul film / acara bioskop |
-| `genre` | `String` | Genre film |
-| `harga` | `double` / `int` | Harga tiket bioskop |
-| `gambar` | `String` | Path file lokal tempat gambar disimpan |
+### **Class: `Studio`**
+
+#### **Atribut:**
+| Nama Atribut | Tipe Data | Deskripsi | Berlaku Di |
+| :--- | :--- | :--- | :--- |
+| `idStudio` | String | Identifier / ID unik untuk setiap studio (misal: `STD-01`) | C++, Java, Python, PHP |
+| `namaStudio` | String | Nama studio bioskop (misal: `Studio 1 - Regular`, `IMAX Hall`) | C++, Java, Python, PHP |
+| `jenisLayar` | String | Tipe/teknologi layar (misal: `2D`, `3D`, `IMAX`, `4DX`) | C++, Java, Python, PHP |
+| `kapasitasKursi` | Integer / Int | Jumlah total kapasitas kursi di dalam studio | C++, Java, Python, PHP |
+| `hargaTiket` | Integer / Double | Harga tiket masuk studio per orang (dalam Rp) | C++, Java, Python, PHP |
+| `gambar` | String | Path/URL file gambar lokal pendukung studio | **Khusus PHP** |
+
+#### **Method Utama:**
+- **Constructor:** Menginisialisasi objek `Studio` baru dengan nilai awal.
+- **Getter & Setter:** Mengakses dan mengubah nilai atribut privat/terenkapsulasi.
 
 ---
 
 ## 🔄 Flow & Alur Kode Program
 
-### 1. Versi CLI (C++, Java, Python)
-1. **Inisialisasi**: Program menyiapkan struktur data berupa *list/vector/array* untuk menyimpan objek `Studio`.
-2. **Menu Utama**: Program menampilkan antarmuka menu berbasis terminal berulang (loop) hingga pengguna memilih opsi keluar.
-3. **Pilihan Operasi**:
-   - **Opsi 1 (Tambah Data)**: Meminta input atribut data baru dari pengguna, membuat objek `Studio`, lalu menambahkannya ke dalam list.
-   - **Opsi 2 (Tampilkan Data)**: Melakukan iterasi pada list untuk menampilkan atribut seluruh objek yang ada.
-   - **Opsi 3 (Cari Data)**: Meminta input `ID`, lalu melakukan pencarian sekuensial pada list. Jika ditemukan, detail objek ditampilkan.
-   - **Opsi 4 (Update Data)**: Meminta input `ID`. Jika data ditemukan, pengguna dapat memasukkan nilai atribut baru untuk memperbarui objek.
-   - **Opsi 5 (Hapus Data)**: Meminta input `ID`. Jika data ditemukan, elemen objek dihapus dari list.
+## 🔄 Alur & Flow Kode Program
 
-### 2. Versi Web (PHP)
-1. **Form Input HTML**: Pengguna dapat memasukkan data baru melalui formulir input HTML, termasuk mengunggah/memilih path file gambar lokal.
-2. **Data**: Menampilkan seluruh objek beserta thumbnail gambar lokal.
-3. **Aksi CRUD**:
-   - **Submit Form**: Menambahkan objek baru ke dalam daftar.
-   - **Tombol Edit/Hapus**: Memproses perubahan atau penghapusan objek berdasarkan `ID` unik.
+### **1. Implementasi CLI (C++, Java, Python)**
+- **Menu Interaktif:** Program berjalan dalam perulangan (*looping*) terminal hingga pengguna memilih opsi *Exit*.
+- **Penyimpanan Memory:** Seluruh objek `Studio` disimpan ke dalam struktur data dinamis (*Array/List/Vector of Objects*).
+- **Alur Menu:**
+  1. **Menu 1 (Tambah):** Pengguna menginputkan data studio -> Objek `Studio` dibuat -> Dimasukkan ke dalam List/Vector.
+  2. **Menu 2 (Tampilkan):** Program mengiterasi List/Vector dan menampilkan seluruh atribut `Studio` dalam format tabel CLI.
+  3. **Menu 3 (Update):** Pengguna memasukkan `idStudio` -> Program mencari objek -> Jika ditemukan, pengguna memasukkan data baru untuk memperbarui nilai atribut.
+  4. **Menu 4 (Hapus):** Pengguna memasukkan `idStudio` -> Program mencari posisi objek -> Menghapus objek dari List/Vector.
+  5. **Menu 5 (Cari):** Pengguna memasukkan kata kunci -> Program menampilkan data `Studio` yang cocok.
 
+### **2. Implementasi Web (PHP)**
+- **Tanpa Database:** Data disimpan sementara secara in-memory dalam sesi (*Session*) atau array lokal selama request berjalan.
+- **Form HTML & Tabel Display:**
+  - Halaman menampilkan tabel daftar `Studio` beserta tampilan gambar pendukung dari atribut `gambar`.
+  - Terdapat form input HTML untuk menambahkan data studio baru (termasuk upload/input path gambar lokal).
+  - Terdapat tombol/link aksi **Edit** dan **Delete** untuk memproses manipulasi data `Studio`.
 ---
 
 ## 📁 Struktur Folder Repositori
