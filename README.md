@@ -21,7 +21,7 @@ Program dapat mengelola *array/list of objects* untuk entitas **`Studio`** melal
 2. **Tampilkan Data Studio (Read):** Menampilkan seluruh daftar studio bioskop yang tersimpan.
 3. **Update Data Studio (Update):** Mengubah data studio bioskop berdasarkan `idStudio`.
 4. **Hapus Data Studio (Delete):** Menghapus data studio bioskop dari daftar berdasarkan `idStudio`.
-5. **Cari Data Studio (Search):** Mencari studio bioskop tertentu berdasarkan kriteria unik (`idStudio` / `namaStudio`).
+5. **Cari Data Studio (Search):** Mencari studio bioskop tertentu berdasarkan kriteria unik `idStudio`.
 
 ---
 ## 🧩 Konsep OOP yang Digunakan
@@ -65,7 +65,7 @@ Sistem menggunakan 1 class tunggal yaitu **`Studio`** yang merepresentasikan stu
 | `jenisLayar` | String | Tipe/teknologi layar (misal: `2D`, `3D`, `IMAX`, `4DX`) | C++, Java, Python, PHP |
 | `kapasitasKursi` | Integer / Int | Jumlah total kapasitas kursi di dalam studio | C++, Java, Python, PHP |
 | `hargaTiket` | Integer / Double | Harga tiket masuk studio per orang (dalam Rp) | C++, Java, Python, PHP |
-| `gambar` | String | Path/URL file gambar lokal pendukung studio | **Khusus PHP** |
+| `gambar` | String | Path/URL file gambar lokal pendukung studio | C++, Java, Python, PHP (berbentuk gambar) |
 
 #### **Method Utama:**
 - **Constructor:** Menginisialisasi objek `Studio` baru dengan nilai awal.
